@@ -174,7 +174,7 @@
                         </div>
                       @endif
                       
-                      {{ Form::open(['route' => 'asignarTarea', 'method' => 'POST', 'role' => 'form','files' => true]) }}
+                      {{ Form::open(['route' => 'assignTask', 'method' => 'POST', 'role' => 'form','files' => true]) }}
                         {{ Form::hidden('admin_id', Auth::user()->id ) }}
                         {{ Form::hidden('estatus', 'enproceso' ) }}
                         </br>
@@ -188,10 +188,10 @@
                         {{ Form::text('asunto', '', ['id' => 'asunto', 'class' => 'form-control', 'placeholder' => 'Asunto', 'autofocus' => '']) }}
                         </br>
                         {{ Form::label('Fecha de Recepción', 'Fecha Recepción')}}
-                        {{ Form::custom('datepicker', 'date', 'fecha_recepcion') }}
+
                         {{ Form::label('Fecha de respuesta', 'Fecha Respuesta')}}
                         <!-- class , type, name -->
-                        {{ Form::custom('datepicker', 'date', 'fecha_respuesta') }}
+
                         </br>
                         {{ Form::label('Area Generadora', 'Area Generadora')}}
                         {{ Form::text('area_generadora','', ['id' => 'area_generadora', 'class' => 'form-control', 'placeholder' => 'Area Generadora', 'autofocus' => '']) }}
