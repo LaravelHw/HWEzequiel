@@ -38,5 +38,6 @@ Route::group(['before' => 'auth'], function()
 
 	Route::post('assignTask', ['as' => 'assignTask', 'uses' => 'TaskController@assignTask' ] );
 
+	Route::get('searchTask', ['as' => 'searchTask', 'uses' => 'TaskController@searchTask' ] );
 	//Route::post('uploadImage', 'UserController@uploadImage');
 });
